@@ -1,0 +1,31 @@
+# Ігноруємо конфігураційний файл з чутливими даними
+config.php
+
+# Лог-файли
+*.log
+error_log
+
+# Файли резервних копій
+*.bak
+*.sql
+
+# Кеш та тимчасові файли
+cache/
+tmp/
+*.cache
+
+# Ігноруємо файли NetBeans
+nbproject/private/
+nbproject/Makefile-*
+nbproject/Package-*
+nbproject/build-*
+nbproject/genfiles.properties
+
+# Ігноруємо файли IDE та системні файли
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+
+

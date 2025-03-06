@@ -1,0 +1,25 @@
+/blog
+ ├── /models
+ │    ├── User.php
+ │    ├── Post.php  (буде далі)
+ │    ├── Comment.php  (буде далі)
+ ├── /controllers
+ │    ├── AuthController.php  (буде далі)
+ │    ├── PostController.php  (буде далі)
+ │    ├── CommentController.php  (буде далі)
+ ├── /views
+ │    ├── auth
+ │    │    ├── login.php
+ │    │    ├── register.php
+ │    │    ├── reset_password.php
+ │    ├── posts
+ │    │    ├── create.php
+ │    │    ├── edit.php
+ │    │    ├── index.php
+ │    ├── profile
+ │    │    ├── edit.php
+ ├── /assets (Bootstrap, Quill)
+ ├── config.php (підключення до БД)
+ ├── index.php (головна сторінка)
+ ├── admin.php (адмін-панель)
+
