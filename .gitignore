@@ -4,7 +4,7 @@ config.php
 # Лог-файли
 *.log
 error_log
-
+access_log
 # Файли резервних копій
 *.bak
 *.sql
@@ -15,11 +15,14 @@ tmp/
 *.cache
 
 # Ігноруємо файли NetBeans
+nbproject/
 nbproject/private/
 nbproject/Makefile-*
 nbproject/Package-*
 nbproject/build-*
 nbproject/genfiles.properties
+nbproject/project.properties
+nbproject/project.xml
 
 # Ігноруємо файли IDE та системні файли
 .idea/
