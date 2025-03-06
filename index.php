@@ -2,10 +2,12 @@
 // index.php
 
 session_start();
+//ПЕРЕВІРКА ІНСТАЛЯТОРА
 if (file_exists(__DIR__.'/install/install.php') && !isset($_SESSION["install_success"])){
     include_once __DIR__.'/install/install.php';
     exit();
 }
+//ПЕРЕВІРКА ІНСТАЛЯТОРА
 unset($_SESSION['install_success']);
 require_once 'config.php';
 require_once 'models/User.php';
