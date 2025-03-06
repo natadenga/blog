@@ -7,7 +7,7 @@ error_log
 access_log
 # Файли резервних копій
 *.bak
-*.sql
+
 
 # Кеш та тимчасові файли
 cache/
