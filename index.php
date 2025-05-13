@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
+#<?php
 // index.php
 
 session_start();
@@ -81,7 +83,7 @@ elseif (preg_match('/^' . preg_quote(BASE_URL, '/') . '\/post\/(\d+)\/delete$/',
         $postId = $matches[1];
         $adminController->deletePost($postId);
     } else {
-        header('Location: ' . BASE_URL);
+        header('Location: ' . BASE_URL . '/');
     }
 
 // Адмін-панель
@@ -91,7 +93,7 @@ elseif (preg_match('/^' . preg_quote(BASE_URL, '/') . '\/post\/(\d+)\/delete$/',
         $posts = $adminController->getPosts();
         include './views/admin.php'; // Підключаємо адмін-панель
     } else {
-        header('Location: ' . BASE_URL); // Якщо не адміністратор, перенаправляємо на головну
+        header('Location: ' . BASE_URL . '/'); // Якщо не адміністратор, перенаправляємо на головну
         exit();
 }
 }elseif (preg_match('#^' . preg_quote(BASE_URL, '#') . '/admin/users#', $uri)) {
@@ -101,18 +103,18 @@ elseif (preg_match('/^' . preg_quote(BASE_URL, '/') . '\/post\/(\d+)\/delete$/',
         $users = $adminController->getUsers();
         include './views/admin.php'; // Підключаємо адмін-панель
     } else {
-        header('Location: ' . BASE_URL); // Якщо не адміністратор, перенаправляємо на головну
+        header('Location: ' . BASE_URL . '/'); // Якщо не адміністратор, перенаправляємо на головну
         exit();
 }
 }
 
 // Видалення користувача
- elseif (preg_match('/^' . preg_quote(BASE_URL, '/') . '\/admin\/user\/(\d+)$/delete', $uri, $matches)) {
+ elseif (preg_match('/^' . preg_quote(BASE_URL, '/') . '\/admin\/user\/(\d+)\/delete$/', $uri, $matches)) {
     if ($_SESSION['user_role'] === 'admin') {
         $userId = $matches[1];
         $adminController->deleteUser($userId);
     } else {
-        header('Location: ' . BASE_URL);
+        header('Location: ' . BASE_URL . '/');
     }
 
 }

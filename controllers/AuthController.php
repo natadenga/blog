@@ -35,7 +35,7 @@ class AuthController {
             $_SESSION['message'] = $message;
 
             // Редирект на головну сторінку
-            header('Location: ' . BASE_URL);
+            header('Location: ' . BASE_URL . '/');
             exit;
         } else {
             // Якщо форма не була надіслана, відображаємо її
@@ -75,7 +75,7 @@ class AuthController {
         session_start();  // Початок сесії перед її завершенням
         session_unset();
         session_destroy();
-        header('Location: ' . BASE_URL); // Переадресація після виходу
+        header('Location: ' . BASE_URL . '/'); // Переадресація після виходу
         exit();
     }
 

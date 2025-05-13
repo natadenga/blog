@@ -41,7 +41,7 @@
                     Немає постів.
                 </div>
                 <?php if (!isset($_SESSION['user_id'])): ?>
-                    <p>Ви можете <a href="/blog/register">зареєструватися</a> або <a href="/blog/login">увійти</a>, щоб додавати пости.</p>
+                    <p>Ви можете <a href="<?= BASE_URL ?>/register">зареєструватися</a> або <a href="<?= BASE_URL ?>/login">увійти</a>, щоб додавати пости.</p>
                 <?php endif; ?>
 <?php else: ?>
                 
@@ -61,7 +61,7 @@
                 <?php elseif (isset($_SESSION['user_id'])): ?>
                     <a href="<?= BASE_URL ?>/create" class="btn btn-primary">Створити пост</a>
                 <?php else: ?>
-                    <p>Щоб створити пост, <a href="<?= $baseUrl ?>/register">зареєструйтесь</a> або <a href="/blog/login">увійдіть</a>.</p>
+                    <p>Щоб створити пост, <a href="<?= BASE_URL ?>/register">зареєструйтесь</a> або <a href="<?= BASE_URL ?>/login">увійдіть</a>.</p>
 <?php endif; ?>
 
             </div>

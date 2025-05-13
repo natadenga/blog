@@ -13,7 +13,7 @@ class AdminController {
     public function deleteUser($id) {
         // Видалення користувача
         $this->userModel->deleteUser($id);
-        header('Location: /admin');
+        header('Location: ' . BASE_URL . '/');
         exit();
     }
 
@@ -29,7 +29,7 @@ class AdminController {
     // Видалити пост
     public function deletePost($id) {
         $this->postModel->deletePost($id);
-        header('Location: /admin');
+        header('Location: ' . BASE_URL . '/');
         exit();
     }
 

@@ -31,7 +31,7 @@
                     <div>
                         <!-- Кнопки редагування та видалення -->
                         <a href="<?=BASE_URL?>/post/<?php echo $post['id']; ?>/edit" class="btn btn-warning btn-sm">Редагувати</a>
-                        <form action="<?=BASE_URL?>/post/delete/<?php echo $post['id']; ?>" method="POST" style="display:inline;">
+                        <form action="<?=BASE_URL?>/post/<?php echo $post['id']; ?>/delete" method="POST" style="display:inline;">
                             <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Ви впевнені, що хочете видалити цей пост?')">Видалити</button>
                         </form>
                     </div>
@@ -50,8 +50,8 @@
                     </div>
                     <div>
                         <!-- Кнопки для редагування користувача чи видалення -->
-                        <a href="<?=BASE_URL?>/profile/<?php echo $user['id']; ?>" class="btn btn-warning btn-sm">Редагувати</a>
-                        <form action="<?=BASE_URL?>/admin/delete-user/<?php echo $user['id']; ?>" method="POST" style="display:inline;">
+                            <a href="<?=BASE_URL?>/profile/<?php echo $user['id']; ?>" class="btn btn-warning btn-sm">Редагувати</a>
+                            <form action="<?=BASE_URL?>/admin/user/<?php echo $user['id']; ?>/delete" method="POST" style="display:inline;">
                             <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Ви впевнені, що хочете видалити цього користувача?')">Видалити</button>
                         </form>
                     </div>
